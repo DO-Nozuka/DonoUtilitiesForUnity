@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Dono.UtilitiesForUnity
+namespace Dono.UtilitiesForUnity.Runtime
 {
     public static class UnityPathUtil
     {
