@@ -2,6 +2,7 @@
 
 namespace Dono.UtilitiesForUnity.Components
 {
+    [ExecuteInEditMode]
     public class CameraFixedAspectRatio : MonoBehaviour
     {
         private Camera Camera;
