@@ -54,6 +54,8 @@ namespace Dono.UtilitiesForUnity.Components
         private Vector2 GetTargetSize()
         {
             Vector2 target = new Vector2(baseWidth, baseHeight);
+            Debug.Log($"Screen({Screen.width}, {Screen.height})");
+
             float screenAspect = (float)Screen.width / (float)Screen.height;
 
             if (aspectRangeMin <= screenAspect && screenAspect <= aspectRangeMax)
