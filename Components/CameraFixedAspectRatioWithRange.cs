@@ -24,13 +24,13 @@ namespace Dono.UtilitiesForUnity.Components
         // Start is called before the first frame update
         void Start()
         {
+            Camera = GetComponent<Camera>();
+
+            UpdateAspect();
         }
 
         void Awake()
         {
-            Camera = GetComponent<Camera>();
-
-            UpdateAspect();
         }
 
         void UpdateAspect()
