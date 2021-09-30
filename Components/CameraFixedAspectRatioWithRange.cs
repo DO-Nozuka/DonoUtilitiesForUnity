@@ -2,6 +2,9 @@
 
 namespace Dono.UtilitiesForUnity.Components
 {
+    /// <summary>
+    /// アスペクト比を(AspectRatio - aspectRangeOffsetN) ～ (AspectRatio + aspectRangeOffsetP)の範囲内にする
+    /// </summary>
     [ExecuteInEditMode]
     public class CameraFixedAspectRatioWithRange : MonoBehaviour
     {
@@ -54,7 +57,13 @@ namespace Dono.UtilitiesForUnity.Components
         private Vector2 GetTargetSize()
         {
             Vector2 target = new Vector2(baseWidth, baseHeight);
-            Debug.Log($"Screen({Screen.width}, {Screen.height})");
+
+            if(Screen.width == 0 || Screen.height == 0)
+            {
+                target.x = baseWidth;
+                target.y = baseHeight;
+                return target;
+            }
 
             float screenAspect = (float)Screen.width / (float)Screen.height;
 
