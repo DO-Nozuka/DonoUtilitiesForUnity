@@ -5,7 +5,7 @@ namespace Dono.UtilitiesForUnity.Components
     /// <summary>
     /// アスペクト比を(AspectRatio - aspectRangeOffsetN) ～ (AspectRatio + aspectRangeOffsetP)の範囲内にする
     /// </summary>
-    [ExecuteInEditMode]
+    [ExecuteAlways]
     public class CameraFixedAspectRatioWithRange : MonoBehaviour
     {
         private Camera Camera;
